@@ -1,16 +1,15 @@
-package by.ntishkevich.singleton;
+package by.ntishkevich.builder.theory;
 
-import by.ntishkevich.singleton.theory.App;
 import org.junit.Test;
 
 /**
  * @author ntishkevich
- * @version 20.02.2016
+ * @version 21.02.2016
  */
 public class AppTest {
 
     @Test
-    public void testMain() throws Exception {
+    public void appTest() {
         String[] args = {};
         App.main(args);
     }

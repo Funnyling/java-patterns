@@ -1,6 +1,5 @@
-package by.ntishkevich.singleton;
+package by.ntishkevich.singleton.theory;
 
-import by.ntishkevich.singleton.theory.*;
 import org.junit.Test;
 
 /**
