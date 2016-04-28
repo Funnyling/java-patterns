@@ -1,5 +1,6 @@
 package by.ntishkevich.factory_method;
 
+import by.ntishkevich.factory_method.theory.*;
 import org.junit.Before;
 import org.junit.Test;
 
