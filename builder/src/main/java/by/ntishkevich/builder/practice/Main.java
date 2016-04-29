@@ -39,7 +39,7 @@ public class Main {
         articleBuilder = new XmlArticleBuilder();
         articleBuilder.withTitle(TITLE);
         articleBuilder.withContent(CONTENT);
-        articleBuilder.withAuthors(Arrays.asList(STANISLAV_YANKOVICH, DMITRIY_BARANOVSKIY));
+        articleBuilder.withAuthors(STANISLAV_YANKOVICH, DMITRIY_BARANOVSKIY);
         articleBuilder.build();
     }
 }

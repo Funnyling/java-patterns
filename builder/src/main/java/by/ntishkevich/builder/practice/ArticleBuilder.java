@@ -24,7 +24,7 @@ public abstract class ArticleBuilder {
     }
 
     ArticleBuilder withAuthors(String... authors) {
-        this.authors = Arrays.stream(authors).collect(Collectors.toList());
+        this.authors = Arrays.asList(authors);
         return this;
     }
 
