@@ -1,5 +1,6 @@
 package by.ntishkevich.builder.practice;
 
+import org.yaml.snakeyaml.DumperOptions;
 import org.yaml.snakeyaml.Yaml;
 
 /**
@@ -7,7 +8,7 @@ import org.yaml.snakeyaml.Yaml;
  */
 public class YamlArticleBuilder extends ArticleBuilder {
 
-    private final Yaml yaml = new Yaml();
+    private final Yaml yaml = new Yaml(new ArticlePresenter() , new DumperOptions());
 
     @Override
     public void build() {

@@ -1,8 +1,9 @@
 package by.ntishkevich.builder.practice;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * @author ntishkevich
@@ -33,5 +34,5 @@ public abstract class ArticleBuilder {
         return this;
     }
 
-    abstract void build() throws NoSuchMethodException;
+    abstract void build() throws JsonProcessingException;
 }

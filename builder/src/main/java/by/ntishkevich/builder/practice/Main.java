@@ -1,5 +1,7 @@
 package by.ntishkevich.builder.practice;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+
 import java.util.Arrays;
 
 /**
@@ -23,7 +25,7 @@ public class Main {
     private final static String TITLE = "Правило формирования столбца отправитель";
 
 
-    public static void main(String[] args) throws NoSuchMethodException {
+    public static void main(String[] args) throws JsonProcessingException {
         ArticleBuilder articleBuilder = new YamlArticleBuilder();
         articleBuilder.withTitle(TITLE);
         articleBuilder.withContent(CONTENT);
