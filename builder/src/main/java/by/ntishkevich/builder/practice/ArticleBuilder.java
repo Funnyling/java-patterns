@@ -1,19 +1,37 @@
 package by.ntishkevich.builder.practice;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author ntishkevich
  */
-public interface ArticleBuilder {
+public abstract class ArticleBuilder {
 
-    ArticleBuilder withTitle(String title);
+    protected String title;
+    protected String content;
+    protected List<String> authors;
 
-    ArticleBuilder withContent(String content);
+    ArticleBuilder withTitle(String title) {
+        this.title = title;
+        return this;
+    }
 
-    ArticleBuilder withAuthors(String... authors);
+    ArticleBuilder withContent(String content) {
+        this.content = content;
+        return this;
+    }
 
-    ArticleBuilder withAuthors(List<String> authors);
+    ArticleBuilder withAuthors(String... authors) {
+        this.authors = Arrays.stream(authors).collect(Collectors.toList());
+        return this;
+    }
 
-    void build() throws NoSuchMethodException;
+    ArticleBuilder withAuthors(List<String> authors) {
+        this.authors = authors;
+        return this;
+    }
+
+    abstract void build() throws NoSuchMethodException;
 }

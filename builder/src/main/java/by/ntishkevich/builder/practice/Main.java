@@ -1,5 +1,7 @@
 package by.ntishkevich.builder.practice;
 
+import java.util.Arrays;
+
 /**
  * @author ntishkevich
  */
@@ -16,7 +18,8 @@ public class Main {
             "Для типа 4 - сначала ставится person.name и в скобках COALESCE(organization.short_name, organization.name, '').\n" +
             "Порядок подписей определяется по их id.";
 
-    private final static String AUTHOR = "Stanislav Yankovich";
+    private final static String STANISLAV_YANKOVICH = "Stanislav Yankovich";
+    private final static String DMITRIY_BARANOVSKIY = "Dmitriy Baranovskiy";
     private final static String TITLE = "Правило формирования столбца отправитель";
 
 
@@ -24,13 +27,19 @@ public class Main {
         ArticleBuilder articleBuilder = new YamlArticleBuilder();
         articleBuilder.withTitle(TITLE);
         articleBuilder.withContent(CONTENT);
-        articleBuilder.withAuthors(AUTHOR);
+        articleBuilder.withAuthors(STANISLAV_YANKOVICH);
         articleBuilder.build();
 
         articleBuilder = new JsonArticleBuilder();
         articleBuilder.withTitle(TITLE);
         articleBuilder.withContent(CONTENT);
-        articleBuilder.withAuthors(AUTHOR);
+        articleBuilder.withAuthors(Arrays.asList(STANISLAV_YANKOVICH, DMITRIY_BARANOVSKIY));
+        articleBuilder.build();
+
+        articleBuilder = new XmlArticleBuilder();
+        articleBuilder.withTitle(TITLE);
+        articleBuilder.withContent(CONTENT);
+        articleBuilder.withAuthors(Arrays.asList(STANISLAV_YANKOVICH, DMITRIY_BARANOVSKIY));
         articleBuilder.build();
     }
 }
